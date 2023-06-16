@@ -17,7 +17,16 @@
     );
 
     
-    --gradient-blue: linear-gradient(180deg, rgba(151,59,237,1) 25%, rgba(240,31,158,1) 100%);
+    --gradient-blue: linear-gradient(
+        180deg, rgba(151,59,237,1) 25%, 
+        rgba(240,31,158,1) 100%
+    );
+
+    --colors-g-hover: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+    );
 }
 
 *,
@@ -164,7 +173,9 @@ Link Style
 =====
 */
 
-.start-button-01 {
+
+
+.nav-button {
     position: absolute;
     background: var(--color-primary-400);
     padding: 1.3rem 2rem;
@@ -172,16 +183,21 @@ Link Style
     text-align: center;
     right: 2%;
     cursor: pointer;
-}
 
-.nav-button {
     text-decoration: none;
     color: var(--color-neutral-400);
     font-size: large;
     font-weight: 700;
 }
 
-.start-button-02 {
+.nav-button:hover {
+
+    filter: brightness(1.5);
+
+    transition: .3s ease-in-out;
+}
+
+.summary-button {
     position: absolute;
     background: var(--gradient-orange);
     padding: 1.3rem 2rem;
@@ -189,14 +205,20 @@ Link Style
     text-align: center;
     top: 87%;
     cursor: pointer;
-}
 
-.summary-button {
     text-decoration: none;
     color: var(--color-neutral-400);
     font-size: large;
     font-weight: 700;
+
 }
+
+.summary-button:hover {
+    filter: brightness(1.5);
+
+    transition: .3s ease-in-out;
+}
+
 
 .section-button {
     text-decoration: none;
@@ -214,20 +236,39 @@ Link Style
     color: var(--color-gradient-300);
 }
 
-.start-button-03 {
+.section-button:hover {
+    filter: brightness(1.5);
 
+    transition: .3s ease-in-out;
+}
+
+
+.footer-button {
     background: var(--gradient-blue);
     padding: 1.3rem 2rem;
     border-radius: 2.5rem;
     text-align: center;
     cursor: pointer;
-}
 
-.footer-button {
     text-decoration: none;
     color: var(--color-neutral-400);
     font-size: large;
     font-weight: 700;
+}
+
+.footer-button:hover {
+    filter: brightness(1.5);
+
+    transition: .3s ease-in-out;
+}
+
+.logo-image {
+    cursor: pointer;
+}
+
+.logo-image:hover {
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
 }
 
 
@@ -354,7 +395,7 @@ responsive
         margin: -0.53rem;
     }
 
-    .start-button-02 {
+    .summary-button {
         position: static;
     }
 
@@ -395,6 +436,31 @@ responsive
     .footer-wrapper {
         max-width: 35rem;
         margin: 8rem auto 0;
+    }
+
+    .logo-image {
+        transform: scale(.8);
+    }
+
+    .logo-image:hover {
+        transform: scale(.9);
+    }
+
+    .nav-button {
+        transform: scale(.8);
+    }
+
+    .summary-button {
+        transform: scale(.8);
+    }
+
+    .footer-button {
+        transform: scale(.8);
+    }
+
+    .section-button {
+        transform: scale(.9);
+        margin-left: -.29rem;
     }
 
     p {
